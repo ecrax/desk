@@ -3,7 +3,6 @@ import {
   Html,
   OrbitControls,
   PerspectiveCamera,
-  useGLTF,
   useProgress,
 } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
@@ -13,7 +12,11 @@ import { Screen } from "../models/Screen";
 
 const Loader: React.FC = () => {
   const { progress } = useProgress();
-  return <Html center>{progress.toFixed()} % loaded</Html>;
+  return (
+    <Html center>
+      <div className="whitespace-nowrap">{progress.toFixed()}% loaded</div>
+    </Html>
+  );
 };
 
 const Desk: React.FC = () => {
