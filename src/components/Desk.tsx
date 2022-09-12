@@ -37,8 +37,9 @@ const Desk: React.FC = () => {
       <OrbitControls
         enablePan={false}
         minDistance={2}
-        maxDistance={Math.E ** (0.4 * -aspect) * 10}
+        maxDistance={Math.E ** (0.4 * -aspect) * 7.5}
         target={[0, 0.5, 0]}
+        enableZoom={false}
       />
       <Table />
       <Screen
